@@ -1,0 +1,112 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e1f26;
+    font-family: system-ui, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    padding: 20px;
+    background: #2a2c36;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 16px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 12px;
+    background: #1a1b21;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: #3a3d4a;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: filter .15s, transform .05s;
+}
+
+button:hover { filter: brightness(1.2); }
+button:active { transform: scale(.95); }
+
+.fn { background: #c0392b; }
+.op { background: #f39c12; }
+.equal { background: #27ae60; }
+.zero { grid-column: span 2; }
+
+/* ---------- Historique ---------- */
+.history {
+    margin-top: 20px;
+    padding: 12px;
+    background: #1a1b21;
+    border-radius: 12px;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.history-header h2 {
+    color: #aaa;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.clear-history {
+    height: auto;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: #c0392b;
+    font-size: .8rem;
+}
+
+#history-list {
+    list-style: none;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+#history-list li {
+    padding: 8px 6px;
+    border-bottom: 1px solid #2a2c36;
+    color: #ddd;
+    font-size: .95rem;
+    text-align: right;
+    cursor: pointer;
+}
+
+#history-list li:hover { background: #2a2c36; }
+#history-list li:last-child { border-bottom: none; }
+
+#history-list .empty {
+    color: #666;
+    text-align: center;
+    cursor: default;
+}
+#history-list .empty:hover { background: none; }
