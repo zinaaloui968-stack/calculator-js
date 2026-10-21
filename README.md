@@ -25,3 +25,6 @@ Ce projet est une calculatrice web simple développée avec HTML, CSS et JavaScr
 
 ## Objectif
 Mettre en pratique les bases du développement web et apprendre à gérer un projet avec Git et GitHub.
+## Aperçu du projet
+
+![Capture de la calculatrice](calculator.png)
